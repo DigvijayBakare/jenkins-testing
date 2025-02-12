@@ -3,6 +3,9 @@ package FunctionalInterfaces;
 import java.util.stream.IntStream;
 
 public class PrimeNumber {
+ public static void main(String[] args) {
+        System.out.println("Is no. prime => " + isPrime(5));
+    }
     private static boolean isPrime(int n) {             // traditional way
         boolean flag = false;
         for (int i = 2; i < n; i++) {
@@ -22,7 +25,5 @@ public class PrimeNumber {
         return n > 0 && IntStream.range(2, n).noneMatch(index -> n % index == 0);
     }
 
-    public static void main(String[] args) {
-        System.out.println("Is no. prime => " + isPrime(5));
-    }
+   
 }
